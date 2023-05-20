@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -15,19 +14,18 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "paths": {
-      "ono-ui": [
-        "dist/ono-ui"
-      ]
+      "ono-ui": ["dist/ono-ui"],
+      "@core/*": ["projects/ono-star-wars/src/app/core/*"],
+      "@features/*": ["projects/ono-star-wars/src/app/features/*"],
+      "@shared/*": ["projects/ono-star-wars/src/app/shared/*"]
     },
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
