@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "roboto";
+  src: url($font-path + "roboto/roboto-regular-webfont.woff2") format("woff2"),
+    url($font-path + "roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "starjedi";
+  src: url($font-path + "starjedi/starjedi-webfont.woff2") format("woff2"),
+    url($font-path + "starjedi/starjedi-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

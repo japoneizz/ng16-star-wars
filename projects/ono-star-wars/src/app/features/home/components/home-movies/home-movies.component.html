@@ -1,0 +1,31 @@
+<div class="card-container scroll">
+  <ng-container *ngIf="allMovies$ | async as allMovies">
+    <ng-container *ngFor="let movie of allMovies">
+      <a
+        class="movie-item"
+        [routerLink]="['detail', movie.id, movie.linkTitle]"
+        (mouseover)="onMouseEnter(movie.episodeId)"
+        (mouseleave)="onMouseLeave()"
+        [class.off]="hovering && hovering !== movie.episodeId"
+      >
+        <ono-ui-card
+          [routerLink]="['detail', movie.id, movie.linkTitle]"
+          role="link"
+        >
+          <h2 class="title">{{ movie.title }}</h2>
+          <ono-ui-image
+            class="poster"
+            src="{{ '/assets/episode_' + movie.episodeId + '.webp' }}"
+            [alt]="movie.title"
+          />
+          <div class="movie-data">
+            <p class="director">Director: {{ movie.director }}</p>
+            <p class="release-date">
+              Release date: {{ movie.releaseDate | date }}
+            </p>
+          </div>
+        </ono-ui-card>
+      </a>
+    </ng-container>
+  </ng-container>
+</div>

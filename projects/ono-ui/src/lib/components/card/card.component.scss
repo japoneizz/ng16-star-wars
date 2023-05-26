@@ -1,0 +1,11 @@
+:host {
+  width: var(--card-width, auto);
+  min-width: var(--card-min-width, auto);
+  display: block;
+  border: var(--card-border, 1px solid);
+  border-color: var(--card-border-color, transparent);
+  padding: var(--card-padding, 1rem);
+  border-radius: var(--card-border-radius, 10px);
+  background: var(--card-background, auto);
+  box-shadow: var(--card-shadow, auto);
+}

@@ -1,0 +1,63 @@
+@use "ono-ui" as ui;
+
+:host {
+  position: relative;
+  z-index: 1;
+  --card-background: var(--white);
+
+  .header {
+    color: var(--yellow);
+  }
+
+  .back-link {
+    display: block;
+    color: inherit;
+    padding-bottom: ui.rem(20px);
+  }
+
+  .title {
+    font-family: "starjedi", sans-serif;
+    font-size: ui.rem(24px);
+    margin-bottom: ui.rem(16px);
+    color: var(--yellow);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: ui.rem(24px);
+    margin: ui.rem(24px) 0;
+
+    @include ui.from(ui.$desktop) {
+      grid-template-columns: 350px 1fr;
+    }
+  }
+
+  .poster {
+    height: max-content;
+  }
+
+  .opening-crawl {
+    font-size: ui.rem(20px);
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: ui.rem(24px);
+  }
+
+  .characters {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include ui.from(ui.$desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include ui.from(ui.$wide) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

@@ -8,7 +8,8 @@
     "watch:ono-sw": "ng build ono-star-wars --watch --configuration development",
     "build:ono-ui": "ng build ono-ui",
     "test:app": "jest --config projects/ono-star-wars/jest.config.js",
-    "test:lib": "jest --config projects/ono-ui/jest.config.js"
+    "test:lib": "jest --config projects/ono-ui/jest.config.js",
+    "init": "npm run build:ono-ui && npm run start"
   },
   "private": true,
   "dependencies": {

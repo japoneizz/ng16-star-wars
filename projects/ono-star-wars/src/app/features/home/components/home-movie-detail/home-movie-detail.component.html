@@ -1,0 +1,28 @@
+<ng-container *ngIf="moviesDetail$ | async as movie">
+  <div class="header">
+    <a class="back-link" routerLink="/users">Back</a>
+    <p class="title">{{ movie.title }}</p>
+  </div>
+
+  <div class="content">
+    <ono-ui-card class="poster">
+      <ono-ui-image
+        src="{{ '/assets/episode_' + movie.episodeId + '.webp' }}"
+        [alt]="movie.title"
+      />
+    </ono-ui-card>
+    <div class="details">
+      <ono-ui-card class="opening-crawl">{{ movie.openingCrawl }}</ono-ui-card>
+      <ono-ui-card>
+        <p>Director: {{ movie.director }}</p>
+        <p>Producer: {{ movie.producer }}</p>
+      </ono-ui-card>
+      <p class="title">Characters</p>
+      <div class="characters">
+        <ng-container *ngFor="let character of movie.characters">
+          <ono-sw-home-movie-character [characterId]="character" />
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-container>

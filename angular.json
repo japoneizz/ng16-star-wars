@@ -63,7 +63,10 @@
               "projects/ono-star-wars/src/assets"
             ],
             "styles": ["projects/ono-star-wars/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["./dist/ono-ui/assets/scss"]
+            }
           },
           "configurations": {
             "production": {

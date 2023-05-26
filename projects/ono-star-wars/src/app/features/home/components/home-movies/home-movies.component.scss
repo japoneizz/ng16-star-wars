@@ -1,0 +1,63 @@
+@use "ono-ui" as ui;
+
+:host {
+  $gap: 20px;
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  .card-container {
+    --card-min-width: 300px;
+    --card-background: var(--white);
+    --card-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    column-count: 1;
+    column-gap: $gap;
+
+    @include ui.from(ui.$desktop) {
+      column-count: 3;
+    }
+
+    .title {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+
+      @include ui.from(ui.$desktop) {
+        font-size: ui.rem(24px);
+      }
+    }
+
+    .movie-data {
+      font-size: 14px;
+
+      @include ui.from(ui.$desktop) {
+        font-size: 1rem;
+      }
+    }
+
+    .movie-item {
+      display: inline-block;
+      color: var(--text);
+      width: 100%;
+      margin-bottom: $gap;
+      transition: all 0.5s ease-in-out;
+      z-index: 1;
+      position: relative;
+
+      .poster {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        z-index: 2;
+      }
+
+      &.off {
+        opacity: 0.2;
+      }
+    }
+  }
+}

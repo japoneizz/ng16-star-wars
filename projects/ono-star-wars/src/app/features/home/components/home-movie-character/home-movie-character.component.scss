@@ -1,0 +1,23 @@
+@use "ono-ui" as ui;
+
+:host {
+  .character {
+    display: flex;
+    gap: ui.rem(16px);
+    align-items: center;
+    height: 100%;
+
+    .card {
+      font-family: "starjedi", sans-serif;
+      color: var(--yellow);
+      width: 100%;
+    }
+
+    .profile {
+      min-width: ui.rem(48px);
+      min-height: ui.rem(48px);
+      border-radius: 100%;
+      border: 1px solid var(--white);
+    }
+  }
+}

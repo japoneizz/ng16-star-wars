@@ -1,0 +1,8 @@
+<div class="character">
+  <div class="profile"></div>
+  <div class="card">
+    <ng-container *ngIf="character$ | async as character">
+      {{ character.name }}
+    </ng-container>
+  </div>
+</div>

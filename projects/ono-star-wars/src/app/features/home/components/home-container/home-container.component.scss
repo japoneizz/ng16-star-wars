@@ -1,0 +1,31 @@
+@use "./animation/sky.scss" as sky;
+
+:host {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+
+  .sky {
+    .stars {
+      @include sky.star-template(sky.$numStars, 1px, sky.$starScrollDuration);
+
+      &--medium {
+        @include sky.star-template(
+          sky.$numMediumStars,
+          2px,
+          sky.$starMediumScrollDuration
+        );
+      }
+
+      &--large {
+        @include sky.star-template(
+          sky.$numLargeStars,
+          3px,
+          sky.$starLargeScrollDuration
+        );
+      }
+    }
+  }
+}

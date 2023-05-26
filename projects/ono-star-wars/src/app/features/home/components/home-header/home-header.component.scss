@@ -1,0 +1,11 @@
+@use "ono-ui" as ui;
+
+:host {
+  .logo {
+    width: ui.rem(100px);
+
+    @include ui.from(ui.$desktop) {
+      width: ui.rem(200px);
+    }
+  }
+}

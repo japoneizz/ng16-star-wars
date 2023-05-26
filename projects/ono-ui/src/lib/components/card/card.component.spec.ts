@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OnoUiComponent } from './ono-ui.component';
+import { CardComponent } from './card.component';
 
-describe('OnoUiComponent', () => {
-  let component: OnoUiComponent;
-  let fixture: ComponentFixture<OnoUiComponent>;
+describe('CardComponent', () => {
+  let component: CardComponent;
+  let fixture: ComponentFixture<CardComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OnoUiComponent]
+      imports: [CardComponent],
     });
-    fixture = TestBed.createComponent(OnoUiComponent);
+    fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
